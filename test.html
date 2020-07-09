@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>Graph</title>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<style>
+	body{ background-image:url(Currency.jpg); background-repeat: no-repeat; background-size:cover;
+	 
+		}
+
+div#container
+{
+    width:840px;
+    height:317px;
+    overflow:hidden;     /* if you don't want a scrollbar, set to hidden */
+    overflow-x:hidden;   /* hides horizontal scrollbar on newer browsers */
+
+    /* resize and min-height are optional, allows user to resize viewable area */
+    -webkit-resize:vertical; 
+    -moz-resize:vertical;
+    resize:vertical;
+    min-height:465px;
+}
+
+iframe#embed
+{
+    width:1600px;       /* set this to approximate width of entire page you're embedding */
+    height:2000px;      /* determines where the bottom of the page cuts off */
+    margin-left:-133px; /* clipping left side of page */
+    margin-top:-384px;  /* clipping top of page */
+    overflow:hidden;
+
+    /* resize seems to inherit in at least Firefox */
+    -webkit-resize:none;
+    -moz-resize:none;
+    resize:none;
+}
+</style>
+</head>
+
+
+<body onLoad="run()">
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="Currency_converter.html">Concurrency Converter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" style=" ">
+        <a class="nav-link" href="test.html">Graph <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Info</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div id='container' style='transform:translateX(35%) translateY(15%)'>
+	<iframe id="embed" src=""></iframe>
+</div>
+<script>
+	function run(){
+	var arr = document.cookie.split(";");
+      var s1 = arr[0].split("=");
+	var s2 = arr[1].split("=");
+	 document.getElementById('embed').src = "https://www.xe.com/currencycharts/?from="+s1[1]+"&to="+s2[1]+"&view=1Y";
+	}
+</script>
+</div>
+</body>
+</html>

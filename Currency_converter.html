@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="fonts/icomoon/style.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<title>Currency Converter</title>
+<style>
+	body{ background-image:url(Currency.jpg); background-repeat: no-repeat; background-size:cover;
+
+		}
+</style>
+<script>
+	function cookieWrite(){
+		var from = document.getElementById('From').value;
+		var to = document.getElementById('To').value;
+		document.cookie = "From="+from;
+		document.cookie = "To="+to;
+
+		}
+</script>
+</head>
+
+<body>
+<div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Concurrency Converter</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" style=" ">
+        <a class="nav-link" href="test.html" onClick="cookieWrite()">Graph <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Info</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container" style=" transform: translateX(5%) translateY(50%); border-radius:5%; background-color:rgba(225,225,225,.2); border:2px solid #111; width:60%;">
+
+ <div class="form-group" style="width:100%;">
+ 	<h1 style=" font-weight:bold; font:'Arial Black', Gadget, sans-serif; text-align:center; margin-top:20px;">Currency Converter</h1>
+      <table>
+      	<tr>
+              <td width="50%" style="padding-right:100px;"  >
+      		<label for="sel1" style="font-weight:bold; font-size:20px;">Select Currency</label>
+				<select id="From" class="form-control" >
+					<option value="AED">United Arab Emeriates dirham</option>
+      				<option value="ARS">Argentine peso</option>
+      				<option value="AUD">Australian dollar</option>
+      				<option value="BGN">Bulgarian lev</option>
+      				<option value="BRL">Brazilian real</option>
+      				<option value="BSD">Bahamian doller</option>
+				      <option value="CAD">Canadian doller</option>
+				      <option value="CHF">Swiss franc</option>
+				      <option value="CLP">Chilean peso</option>
+				      <option value="CNY">Chinese yuan</option>
+				      <option value="COP">Colombian peso</option>
+				      <option value="CZK">Czech koruna</option>
+				      <option value="DKK">Denmark</option>
+				      <option value="DOP">Dominican peso</option>
+				      <option value="EGP">Egyptian pound</option>
+				      <option value="EUR">Germany euro</option>
+				      <option value="FJD">Fijian doller</option>
+				      <option value="GBP">British pound</option>
+				      <option value="GTQ">Guatemalan quetzal</option>
+				      <option value="HKD">Hong Kong dollar</option>
+				      <option value="HRK">Croatian kuna</option>
+				      <option value="HUF">Hungarian forint</option>
+				      <option value="IDR">Indonesian rupiah</option>
+				      <option value="ILS">Israeli new shekel</option>
+				      <option value="INR">Indian rupees</option>
+					<option value="ISK">Icelandic krona</option>
+				      <option value="JPY">Japanese yen</option>
+				      <option value="KRW">South Korean won</option>
+				      <option value="KZT">Kazakhstani tenge</option>
+				      <option value="MXN">Mexican peso</option>
+				      <option value="MYR">Malaysian ringgit</option>
+				      <option value="NOK">Norwegian krone</option>
+				      <option value="NZD">New Zealand Dollar</option>
+				      <option value="PAB">Panamanian balboa</option>
+				      <option value="PEN">Peruvian sol </option>
+				      <option value="PHP">Philippine peso</option>
+				      <option value="PKR">Pakistani rupees</option>
+				      <option value="PLN">Polish zloty</option>
+				      <option value="PYG">Paraguayan guarani</option>
+				      <option value="RON">Romanian leu</option>
+				      <option value="RUB">Russian ruble</option>
+				      <option value="SAR">Saudi riyal</option>
+				      <option value="SEK">Swedish Krona</option>
+				      <option value="SGD">Singapore dollar</option>
+				      <option value="THB">Thai baht</option>
+				      <option value="TRY">Turkish lira</option>
+				      <option value="TWD">New Taiwan dollar</option>
+				      <option value="UAH">Ukraine hryvnia</option>
+				      <option value="USD">United States dollar</option>
+				      <option value="UYU">Uruguayan peso</option>
+				      <option value="VND">Vietnamese domg</option>
+				      <option value="ZAR">South African rand</option>
+			</select>
+
+		</td>
+	<td width="100%" style="padding-left:60px;" colspan="2">
+
+<label for="sel1" style="font-weight:bold; font-size:20px;">Currency To Convert In</label>
+<select id="To" style=" " class="form-control" >
+	<option value="AED">United Arab Emeriates dirham</option>
+      <option value="ARS">Argentine peso</option>
+      <option value="AUD">Australian dollar</option>
+      <option value="BGN">Bulgarian lev</option>
+      <option value="BRL">Brazilian real</option>
+      <option value="BSD">Bahamian doller</option>
+      <option value="CAD">Canadian doller</option>
+      <option value="CHF">Swiss franc</option>
+      <option value="CLP">Chilean peso</option>
+      <option value="CNY">Chinese yuan</option>
+      <option value="COP">Colombian peso</option>
+      <option value="CZK">Czech koruna</option>
+      <option value="DKK">Denmark</option>
+      <option value="DOP">Dominican peso</option>
+      <option value="EGP">Egyptian pound</option>
+      <option value="EUR">Germany euro</option>
+      <option value="FJD">Fijian doller</option>
+      <option value="GBP">British pound</option>
+      <option value="GTQ">Guatemalan quetzal</option>
+      <option value="HKD">Hong Kong dollar</option>
+      <option value="HRK">Croatian kuna</option>
+      <option value="HUF">Hungarian forint</option>
+      <option value="IDR">Indonesian rupiah</option>
+      <option value="ILS">Israeli new shekel</option>
+      <option value="INR">Indian rupees</option>
+	<option value="ISK">Icelandic krona</option>
+      <option value="JPY">Japanese yen</option>
+      <option value="KRW">South Korean won</option>
+      <option value="KZT">Kazakhstani tenge</option>
+      <option value="MXN">Mexican peso</option>
+      <option value="MYR">Malaysian ringgit</option>
+      <option value="NOK">Norwegian krone</option>
+      <option value="NZD">New Zealand Dollar</option>
+      <option value="PAB">Panamanian balboa</option>
+      <option value="PEN">Peruvian sol </option>
+      <option value="PHP">Philippine peso</option>
+      <option value="PKR">Pakistani rupees</option>
+      <option value="PLN">Polish zloty</option>
+      <option value="PYG">Paraguayan guarani</option>
+      <option value="RON">Romanian leu</option>
+      <option value="RUB">Russian ruble</option>
+      <option value="SAR">Saudi riyal</option>
+      <option value="SEK">Swedish Krona</option>
+      <option value="SGD">Singapore dollar</option>
+      <option value="THB">Thai baht</option>
+      <option value="TRY">Turkish lira</option>
+      <option value="TWD">New Taiwan dollar</option>
+      <option value="UAH">Ukraine hryvnia</option>
+      <option value="USD">United States dollar</option>
+      <option value="UYU">Uruguayan peso</option>
+      <option value="VND">Vietnamese domg</option>
+      <option value="ZAR">South African rand</option>
+</select>
+</td>
+<td></td>
+</tr>
+<tr>
+	<td style="padding-top:20px; font-size:18px; padding-left:70px;">
+		<input height="50%;" type="number" onKeyUp="AmountCheck()" name="amount" id="amt">
+	</td>
+
+      <td style="font-size:18px; padding-top:18px; padding-left:90px;" colspan="2">
+		<input type="number"  readonly name="result" id="rst">
+	</td><td></td>
+</tr>
+<tr>
+	<td >
+      </td>
+	<td style="padding-top:20px;">
+      		<input type="submit" class=" btn-success" style="margin-left:-50px; font-size:20px;" value="Convert"  id="convert" onClick="getLink()">
+      </td>
+      <td>
+
+      </td>
+</tr>
+</table>
+
+</div>
+
+<script>
+function getLink(){
+
+	var from = document.getElementById('From').value;
+	var to = document.getElementById('To').value;
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+  		if (this.readyState == 4 && this.status == 200) {
+       	    var myObj = JSON.parse(this.responseText);
+		    var on = myObj.rates[to];
+		    var amtt = document.getElementById('amt').value;
+		    var amount = on *amtt;
+		    document.getElementById('rst').value = amount;
+  			}
+		};
+	xmlhttp.open("GET", "https://api.exchangerate-api.com/v4/latest/"+from, true);
+	xmlhttp.send();
+
+}
+
+function AmountCheck(){
+	var num = document.getElementById('amt').value;
+	 if(num.trim().length == 0){
+		 alert("Enter the number");
+		 document.getElementById('convert').disabled;
+		 }
+	else{
+		document.getElementById('convert').disabled == true;
+		}
+	}
+</script>
+</div>
+</div>
+<footer style="margin-top:270px; background-color:rgba(0,153,255,0.5)" class="page-footer font-small ">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="#" style="background-color:rgba(17,17,17,1)">CurrencyConverter</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+</body>
+</html>
